@@ -26,7 +26,10 @@ const CountryPicker = ( { handleCountryChange }) => {
     ]
     fetchedCountries.map((country) => options.push({label: country, value: country}))
     return (
-        <Select className={styles.selectComponent} value={selected} options={options} onChange={(selected) => handleChange(selected)}/>
+        <div>
+            <p>Pick a country to see the tracked data ...</p>
+            <Select className={styles.selectComponent} value={selected} options={options} onChange={(selected) => handleChange(selected)}/>
+        </div> 
     )
 }
 export default CountryPicker
